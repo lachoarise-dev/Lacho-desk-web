@@ -55,12 +55,13 @@ export default function Hero({ mode }: Props) {
   const [editingBio, setEditingBio] = useState(false);
   useEffect(() => { localStorage.setItem(BIO_KEY(mode), bio); }, [bio, mode]);
 
-  // Save — guarda siempre que se pulse; muestra confirmación breve y vuelve al estado normal
-  const [saved, setSaved] = useState(false);
-  const saveDay = () => {
-    localStorage.setItem(TODAY_SAVE_KEY, new Date().toISOString());
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+  // // Save — siempre disponible, confirmación visual de 2 segundos
+const [saved, setSaved] = useState(false);
+const saveDay = () => {
+  localStorage.setItem(TODAY_SAVE_KEY, new Date().toISOString());
+  setSaved(true);
+  setTimeout(() => setSaved(false), 2000);
+};
   };
 
   // Water
