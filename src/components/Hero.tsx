@@ -16,7 +16,7 @@ const BIO_KEY = (m: LachoMode) => `lacho-bio-${m}`;
 // Clave fija para el día actual — se calcula una sola vez al cargar el módulo
 // para evitar inconsistencias si la función se llama en momentos distintos.
 // Claves del día calculadas una sola vez al cargar el módulo (evita inconsistencias entre renders)
-const TODAY_SAVE_KEY    = `lacho-saved-${new Date().toDateString()}`;
+const TODAY_SAVE_KEY = `lacho-saved-${new Date().toDateString()}`;
 const TODAY_WATER_KEY   = `lacho-water-${new Date().toDateString()}`;
 const TODAY_CHECKIN_KEY = `lacho-checkin-${new Date().toDateString()}`;
 
